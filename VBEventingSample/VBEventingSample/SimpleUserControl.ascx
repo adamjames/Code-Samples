@@ -1,0 +1,6 @@
+﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="SimpleUserControl.ascx.vb" Inherits="VBEventingSample.SimpleUserControl" %>
+<br /><br /> <!-- Using line breaks for spacing is poor practice. This is just for illustration.--> 
+<asp:Label ID="lblHeader" Text="This label and the buttons below are inside the UserControl. There are two events defined. One uses the standard Event/EventArgs types, and is a simple notification for the parent that an event has occurred with no additional information. The other defines custom Event and EventArgs types , used to pass a colour within the 'e' value. This is then used by the event handler in the parent page to change the colour of the label." runat="server"></asp:Label><br /><br />
+<asp:Button ID="btnRefreshParentPage" Text="Raise RefreshParentCommand event from UserControl" runat="server"></asp:Button><br />
+<asp:Button ID="btnRefreshParentPageWithRedLabel" Text="Raise RefreshParentWithColourCommand event using Red for label." runat="server"></asp:Button><br />  
+<asp:Button ID="btnRefreshParentPageWithOrangeLabel" Text="Raise RefreshParentWithColourCommand event using Orange for label." runat="server"></asp:Button>  
